@@ -30,7 +30,7 @@ public class Test {
 		ObjectMapper mapper = new ObjectMapper();
 		String jsonInString = mapper.writeValueAsString(users);*/
 		//String jsonInString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(users);
-		System.out.println(JSONRetriever.getConuterpartyIdJSON(702));
+		System.out.println(JSONRetriever.getConuterpartyIdJSON(703));
 	}
 	
 }

@@ -1,13 +1,13 @@
 package com.db.dto;
 
 public class DealCounterInt {
-	private int dealInstrumentId;
+	private String dealInstrumentName;
 	private double dealValue;
-	public int getDealInstrumentId() {
-		return dealInstrumentId;
+	public String getDealInstrumenTName() {
+		return dealInstrumentName;
 	}
-	public void setDealInstrumentId(int dealInstrumentId) {
-		this.dealInstrumentId = dealInstrumentId;
+	public void setDealInstrumenTName(String dealInstrumenTName) {
+		this.dealInstrumentName = dealInstrumenTName;
 	}
 	public double getDealValue() {
 		return dealValue;
@@ -15,6 +15,7 @@ public class DealCounterInt {
 	public void setDealValue(double dealValue) {
 		this.dealValue = dealValue;
 	}
+	
 	
 	
 }
