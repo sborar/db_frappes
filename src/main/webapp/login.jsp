@@ -48,7 +48,7 @@ appname.controller('MyController', ['$scope', '$http',
 			    // this callback will be called asynchronously
 			    // when the response is available
 			  }, function errorCallback(response) {
-				  window.location =response.data;
+				  alert("Invalid Login");
 			    // called asynchronously if an error occurs
 			    // or server returns response with an error status.
 			  });
@@ -69,21 +69,18 @@ appname.controller('MyController', ['$scope', '$http',
 		            <input type="text" class="form-control" placeholder="Enter username" ng-model="username" autofocus>
 		            <br>
 		            <input type="password" class="form-control" placeholder="Enter password" ng-model="password">
+		            
 		            <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
 		
 		                </span>
-		            </label>
+		            </label> 
 		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
-		            <hr>
-		            
-		            
-		
-		        </div>
-		
-		          <!-- Modal -->
-		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+		            <hr>            
+	 			</div>
+
+		<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
 		              <div class="modal-dialog">
 		                  <div class="modal-content">
 		                      <div class="modal-header">
@@ -102,7 +99,8 @@ appname.controller('MyController', ['$scope', '$http',
 		                  </div>
 		              </div>
 		          </div>
-		          <!-- modal -->
+		          </modal>
+		          
 		
 		      </form>	  	
 	  	</div>

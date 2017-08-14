@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,23 +7,26 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
-    <title>Index</title>
-
+    <link rel="shortcut icon" href="assets/img/DBLogo.png" type="image/png" />
+    
+    <title>DB Dashboard</title>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+     <link href="assets/css/dropdown.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/graph.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 
     <script src="assets/js/chart-master/Chart.js"></script>
-    
+
+      
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -39,15 +43,15 @@
       <!--header start-->
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title=""></div>
               </div>
             <!--logo start-->
             <a href="index.html" class="logo"><b>Deutsche Bank</b></a>
             <!--logo end-->
-            <div class="nav notify-row" id="top_menu">
-                <!--  notification start -->
+            <!--div class="nav notify-row" id="top_menu">
+                
                 <ul class="nav top-menu">
-                    <!-- settings start -->
+                  
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-tasks"></i>
@@ -115,8 +119,8 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- settings end -->
-                    <!-- inbox dropdown start-->
+                   
+                   
                     <li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-envelope-o"></i>
@@ -180,13 +184,13 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- inbox dropdown end -->
+                    
                 </ul>
-                <!--  notification end -->
-            </div>
+                
+            </div> -->
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="login.jsp">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -196,22 +200,21 @@
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
       <!--sidebar start-->
-      <aside>
+        <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/db.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Alison</h5>
-              	  	
+                  <p class="centered"><a href="profile.html"><img src="assets/img/friends/fr-04.jpg" class="img-circle" width="60"></a></p>
+                  <h5 class="centered">Alison</h5>
+                    
                   <li class="mt">
                       <a class="active" href="index.html">
                           <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
+                          <span>Dashboard</span></a>
                       </a>
                   </li>
-
-                  <li class="sub-menu">
+                  <!--li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>UI Elements</span>
@@ -221,9 +224,9 @@
                           <li><a  href="buttons.html">Buttons</a></li>
                           <li><a  href="panels.html">Panels</a></li>
                       </ul>
-                  </li>
+                  </li>-->
 
-                  <li class="sub-menu">
+                  <!--li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-cogs"></i>
                           <span>Components</span>
@@ -253,27 +256,9 @@
                       <ul class="sub">
                           <li><a  href="form_component.html">Form Components</a></li>
                       </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-th"></i>
-                          <span>Data Tables</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="basic_table.html">Basic Table</a></li>
-                          <li><a  href="responsive_table.html">Responsive Table</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class=" fa fa-bar-chart-o"></i>
-                          <span>Charts</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="morris.html">Morris</a></li>
-                          <li><a  href="chartjs.html">Chartjs</a></li>
-                      </ul>
-                  </li>
+                  </li>-->
+                  
+                 
 
               </ul>
               <!-- sidebar menu end-->
@@ -285,8 +270,23 @@
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
+
       <section id="main-content">
-          <section class="wrapper">
+          <section class="wrapper site-min-height">
+          <h5><i class="fa fa-angle-right"></i> Select User</h5>
+
+                   
+                          
+                          <div ng-app="APP" ng-controller="MainController">
+							    <select multiple
+							        ng-change="update_select()"
+							        ng-model="selection"
+							        ng-options="option.name for option in select_options">
+						        </select>
+							    
+						   </div>
+                    
+          <!--section class="wrapper">
 
               <div class="row">
                   <div class="col-lg-9 main-chart">
@@ -328,11 +328,11 @@
 					  			<p>Your server is working perfectly. Relax & enjoy.</p>
                   		</div>
                   	
-                  	</div><!-- /row mt -->	
+                  	</div><! /row mt -->	
                   
                       
-                      <div class="row mt">
-                      <!-- SERVER STATUS PANELS -->
+                      <!--div class="row mt">
+                      
                       	<div class="col-md-4 col-sm-4 mb">
                       		<div class="white-panel pn donut-chart">
                       			<div class="white-header">
@@ -357,11 +357,11 @@
 										];
 										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
 								</script>
-	                      	</div><! --/grey-panel -->
-                      	</div><!-- /col-md-4-->
+	                      	</div>
+                      	</div>< /col-md-4-->
                       	
 
-                      	<div class="col-md-4 col-sm-4 mb">
+                      	<!--div class="col-md-4 col-sm-4 mb">
                       		<div class="white-panel pn">
                       			<div class="white-header">
 						  			<h5>TOP PRODUCT</h5>
@@ -376,10 +376,10 @@
 										<img src="assets/img/product.png" width="120">
 	                      		</div>
                       		</div>
-                      	</div><!-- /col-md-4 -->
+                      	</div><!/col-md-4 -->
                       	
-						<div class="col-md-4 mb">
-							<!-- WHITE PANEL - TOP USER -->
+						<!--div class="col-md-4 mb">
+							
 							<div class="white-panel pn">
 								<div class="white-header">
 									<h5>TOP USER</h5>
@@ -397,14 +397,14 @@
 									</div>
 								</div>
 							</div>
-						</div><!-- /col-md-4 -->
+						</div>>
                       	
 
-                    </div><!-- /row -->
+                    </div>-->
                     
                     				
-					<div class="row">
-						<!-- TWITTER PANEL -->
+					<!--div class="row">
+						
 						<div class="col-md-4 mb">
                       		<div class="darkblue-panel pn">
                       			<div class="darkblue-header">
@@ -433,12 +433,12 @@
 										<h5>60% Used</h5>
 									</div>
 								</footer>
-                      		</div><! -- /darkblue panel -->
-						</div><!-- /col-md-4 -->
+                      		</div>
+						</div>
 						
 						
 						<div class="col-md-4 mb">
-							<!-- INSTAGRAM PANEL -->
+							
 							<div class="instagram-panel pn">
 								<i class="fa fa-instagram fa-4x"></i>
 								<p>@THISISYOU<br/>
@@ -446,10 +446,10 @@
 								</p>
 								<p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
 							</div>
-						</div><!-- /col-md-4 -->
+						</div>
 						
 						<div class="col-md-4 col-sm-4 mb">
-							<!-- REVENUE PANEL -->
+							
 							<div class="darkblue-panel pn">
 								<div class="darkblue-header">
 									<h5>REVENUE</h5>
@@ -459,12 +459,12 @@
 								</div>
 								<p class="mt"><b>$ 17,980</b><br/>Month Income</p>
 							</div>
-						</div><!-- /col-md-4 -->
+						</div>
 						
-					</div><!-- /row -->
+					</div>
 					
 					<div class="row mt">
-                      <!--CUSTOM CHART START -->
+                      
                       <div class="border-head">
                           <h3>VISITS</h3>
                       </div>
@@ -506,158 +506,27 @@
                               <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
                           </div>
                       </div>
-                      <!--custom chart end-->
-					</div><!-- /row -->	
+                      
+					</div>
 					
-                  </div><!-- /col-lg-9 END SECTION MIDDLE -->
+                  </div>
+                 -->
                   
                   
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->                  
-                  
-                  <div class="col-lg-3 ds">
-                    <!--COMPLETED ACTIONS DONUTS CHART-->
-						<h3>NOTIFICATIONS</h3>
-                                        
-                      <!-- First Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>2 Minutes Ago</muted><br/>
-                      		   <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Second Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>3 Hours Ago</muted><br/>
-                      		   <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Third Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>7 Hours Ago</muted><br/>
-                      		   <a href="#">Brandon Page</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fourth Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>11 Hours Ago</muted><br/>
-                      		   <a href="#">Mark Twain</a> commented your post.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fifth Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>18 Hours Ago</muted><br/>
-                      		   <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
-                      		</p>
-                      	</div>
-                      </div>
 
-                       <!-- USERS ONLINE SECTION -->
-						<h3>TEAM MEMBERS</h3>
-                      <!-- First Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DIVYA MANIAN</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Second Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DJ SHERMAN</a><br/>
-                      		   <muted>I am Busy</muted>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Third Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-danro.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DAN ROGERS</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fourth Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-zac.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">Zac Sniders</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fifth Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/db.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">Marcel Newman</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
-                      </div>
-
-                        <!-- CALENDAR-->
-                        <div id="calendar" class="mb">
-                            <div class="panel green-panel no-margin">
-                                <div class="panel-body">
-                                    <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
-                                        <div class="arrow"></div>
-                                        <h3 class="popover-title" style="disadding: none;"></h3>
-                                        <div id="date-popover-content" class="popover-content"></div>
-                                    </div>
-                                    <div id="my-calendar"></div>
-                                </div>
-                            </div>
-                        </div><!-- / calendar -->
-                      
-                  </div><!-- /col-lg-3 -->
-              </div><! --/row -->
+              </div>
           </section>
       </section>
 
       <!--main content end-->
+
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2014 - Alvarez.is
+              Copyright © Team FRAPPES 2017
               <a href="index.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
@@ -674,6 +543,7 @@
     <script src="assets/js/jquery.scrollTo.min.js"></script>
     <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
     <script src="assets/js/jquery.sparkline.js"></script>
+    <script src="js/d3.min.js"></script>
 
 
     <!--common script for all pages-->
@@ -690,11 +560,11 @@
         $(document).ready(function () {
         var unique_id = $.gritter.add({
             // (string | mandatory) the heading of the notification
-            title: 'Welcome to Dashgum!',
+            title: 'Welcome to Deutsche Bank!',
             // (string | mandatory) the text inside the notification
-            text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo. Free version for <a href="http://blacktie.co" target="_blank" style="color:#ffd777">BlackTie.co</a>.',
+            text: '.',
             // (string | optional) the image to display on the left
-            image: 'assets/img/db.jpg',
+            image: 'assets/img/DBLogo1.png',
             // (bool | optional) if you want it to fade out on its own or just sit there
             sticky: true,
             // (int | optional) the time you want it to be alive for before fading out
@@ -705,43 +575,156 @@
 
         return false;
         });
-	</script>
+		</script>
+
+
+					<script>var app = angular.module('APP', []);
+
+						app.controller('MainController', ['$scope', function($scope) {
+				    
+				    	$scope.select_options = [
+				           {name:'0'},
+				           {name:'1'},
+				           {name:'2'},
+				           {name:'3'},
+				           {name:'4'},
+				           {name:'5'},
+				           {name:'6'},
+				           {name:'7'},
+				           {name:'8'},
+				           {name:'9'},
+				           {name:'10'},
+				           {name:'11'},
+				           {name:'12'}
+				    	];	
+				    
+				    		$scope.update_select = function() {
+				        	console.log($scope.selection);
+				    	};
+
+						}]);
+					</script>
+
+
+
+
+
+		<!--   Scripts for Graph plotting -->
+		<script>
+// set the dimensions of the canvas
+var margin = {top: 20, right: 120, bottom: 70, left: 120},
+    width = 600 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+
+
+// set the ranges
+var x = d3.scaleBand()
+      .range([0, width], .1)
+      .padding(.1) ; 
+
+var y = d3.scaleLinear ()
+      .range([height, 0]);
+
+// define the axis
+var xAxis = d3.axisBottom()
+    .scale(x)
+var yAxis = d3.axisLeft()
+    .scale(y)
+    .ticks(20) ;   
+
+// add the SVG element
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
+
+
+// load the data
+d3.json("file.json", function(error, data) {
+
+    data.forEach(function(d) {
+        d.dealInstrumentId = d.dealInstrumentId;
+        d.dealValue = d.dealValue;
+    });
 	
-	<script type="application/javascript">
-        $(document).ready(function () {
-            $("#date-popover").popover({html: true, trigger: "manual"});
-            $("#date-popover").hide();
-            $("#date-popover").click(function (e) {
-                $(this).hide();
-            });
-        
-            $("#my-calendar").zabuto_calendar({
-                action: function () {
-                    return myDateFunction(this.id, false);
-                },
-                action_nav: function () {
-                    return myNavFunction(this.id);
-                },
-                ajax: {
-                    url: "show_data.php?action=1",
-                    modal: true
-                },
-                legend: [
-                    {type: "text", label: "Special event", badge: "00"},
-                    {type: "block", label: "Regular event", }
-                ]
-            });
-        });
-        
-        
-        function myNavFunction(id) {
-            $("#date-popover").hide();
-            var nav = $("#" + id).data("navigation");
-            var to = $("#" + id).data("to");
-            console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+  // scale the range of the data
+  x.domain(data.map(function(d) { return d.dealInstrumentId; }));
+
+  y.domain (      d3.extent(data, function(d) {
+    return d.dealValue ;
+  })).nice();
+  
+
+
+  // add axis
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)     
+    .selectAll("text")
+      .style("text-anchor", "end")
+      .attr("dx", "-.8em")
+      .attr("dy", "-.55em")
+      .attr("transform", "rotate(-90)" );
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 5)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Frequency");
+
+
+  // Add bar chart
+  svg.selectAll("bar")
+      .data(data)
+    .enter().append("rect")
+
+      .attr("class", function(d) {
+        if (d.dealValue < 0) {
+          return "bar negative" ;
         }
-    </script>
+        else {
+          return "bar positive" ; 
+        }
+      }) 
+
+      .attr("x", function(d) { return x(d.dealInstrumentId); })
+      .attr("width", x.bandwidth())
+        .transition()
+      .duration(500)
+      .attr("y", function(d)  {
+        if (d.dealValue > 0) {
+          return y(d.dealValue);
+        } else {
+          return y(0) ;
+        }
+      })
+      
+
+      .attr("height", function(d) { return Math.abs(y(d.dealValue) - y(0) ) ; })
+
+
+});
+
+</script>
+
+
+
+
+
+
+
+	
   
 
   </body>
 </html>
+
+
+
